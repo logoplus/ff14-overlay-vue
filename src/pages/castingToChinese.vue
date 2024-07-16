@@ -4,6 +4,7 @@ import { addOverlayListener } from '../../cactbot/resources/overlay_plugin_api'
 import { getActionChinese } from '@/resources/actionChinese'
 
 const params = new URLSearchParams(window.location.href.split('?')[1])
+const tipsMode = params.get('tipsMode')
 
 class Cast {
   name: string
@@ -12,7 +13,7 @@ class Cast {
   overTime: number
   actionId: number
   constructor(line: string[]) {
-    this.name = getActionChinese(Number.parseInt(line[4], 16)) ?? line[4]
+    this.name = getActionChinese(Number.parseInt(line[4], 16), tipsMode) ?? line[4]
     this.startTime = Date.now()
     this.castTime = Number(line[8]) * 1000
     this.overTime = this.startTime + this.castTime
@@ -400,8 +401,8 @@ function resetSettings() {
 .el-main {
   width: v-bind(windowWidth);
   color: rgb(254, 254, 253);
-  text-shadow: -1px 0 3px #b38915, 0 1px 3px #b38915, 1px 0 3px #b38915,
-    0 -1px 3px #b38915;
+  text-shadow: -1px 0 3px #b31515, 0 1px 3px #b31515, 1px 0 3px #b31515,
+    0 -1px 3px #b31515;
   padding: 10px;
   margin: 0px;
   > * {
