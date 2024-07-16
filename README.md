@@ -1,16 +1,20 @@
 # ff14-overlay-vue
 
-## 用法
+## 说明
+这是一个魔改版读条幻化，用于自定义读条说明
 
+原版详见[ff14-overlay-vue]https://github.com/Souma-Sumire/ff14-overlay-vue
+
+## 用法
 ACT > OverlayPlugin 悬浮窗插件 > 新建 > 名称：任意，预设：'自定义悬浮窗'，类型：'数据统计'
 
 ### 悬浮窗地址
 
-- from [DieMoe](https://souma.diemoe.net/#/)
-- from [Github Pages](https://souma-sumire.github.io/ff14-overlay-vue/#/)
+- [只显示额外提示](https://logoplus.github.io/ff14-overlay-vue/#/castingToChinese?showSettings=0&tipsMode=only)
+- [提示覆盖汉化](https://logoplus.github.io/ff14-overlay-vue/#/castingToChinese?showSettings=0&tipsMode=overwrite)
+- [提示和汉化组合](https://logoplus.github.io/ff14-overlay-vue/#/castingToChinese?showSettings=0&tipsMode=combine)
 
-## 开发笔记
 
-- 更新 Cactbot 模块 `git submodule update --remote`
-- 添加 PostNamazu 事件声明 / 兼容 Hash 路由模式  `git apply patches/0001-postNamazu.patch patches/0002-hash-mode.patch`
-- vxe-table 不要升级，会破坏现有代码，就让他锁死在这个版本吧
+## 更新笔记
+
+- 增加召唤、赤魔、贤者单奶测试
